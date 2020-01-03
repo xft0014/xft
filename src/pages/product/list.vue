@@ -39,24 +39,12 @@
          <el-select v-model="form.countryType" placeholder="请选择">
       <el-option  v-for="item in countryList" :key="item.value" :label="item.label"
            :value="item.value"></el-option>
-            <el-option label="家具养护" value="9202"></el-option>
+            <!-- <el-option label="家具养护" value="9202"></el-option>
 	      <el-option label="生活急救箱" value="9392"></el-option>
 	      <el-option label="洗护服务" value="9358"></el-option>
-	      <el-option label="澳大利亚袋鼠" value="9999"></el-option>
+	      <el-option label="澳大利亚袋鼠" value="9999"></el-option> -->
   </el-select>
       </el-form-item> 
-      <!-- <el-dropdown>
-          <el-dropdown-item :hide-on-click="false" v-model="form.status">
-              <span class="el-dropdown-link">
-    请选择<i class="el-icon-arrow-down el-icon--right"></i>
-  </span>
-    <el-dropdown-item>家具清洁</el-dropdown-item>
-    <el-dropdown-item>家居养护</el-dropdown-item>
-    <el-dropdown-item>日常保养</el-dropdown-item>
-    <el-dropdown-item disabled>洗护服务</el-dropdown-item>
-    <el-dropdown-item divided>生活急救箱</el-dropdown-item>
-  </el-dropdown-item>
-          </el-dropdown> -->
           <el-form-item label="介绍">
          <el-input v-model="form.categorId"></el-input>
       </el-form-item>
@@ -78,6 +66,7 @@ import querystring from 'querystring'
 export default {
     //用于存放网页中需要调用的方法
     methods:{
+        
         loadData(){
             let url = "http://localhost:6677/product/findAll"
         request.get(url).then((response)=>{
@@ -134,22 +123,13 @@ export default {
             this.title="添加产品信息",
             this.visible=true;
         }
-        },
-    //  doGetDicts() {
-    //   if (this.dialog) {
-    //     getDicts()
-    //       .then(res => {
-    //         this.countryList= res.data.countryList;//把请求返回的列表，赋值给之前定义的
-    //       })
-    //       .catch(err => {
-    //         this.loading = false;
-    //         console.log(err.response.data.message);
-    //       });
-    //   }
-    // },
-    //要向网页中存放的数据
+        }, 
     data(){
         return{
+            water: {
+                    siteName: '',
+                },
+                dataOptions: [],//下拉菜单
             visible:false,
             countryList: [],
             customers:[],

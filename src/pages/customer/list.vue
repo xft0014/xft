@@ -110,6 +110,7 @@ toDeleteHandler(id){
       })
       
     },
+    
     toUpdateHandler(row){
       //模态框表单中显示当前信息
       this.form=row;
