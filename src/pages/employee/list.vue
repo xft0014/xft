@@ -54,7 +54,7 @@
   </el-form>
   <span slot="footer" class="dialog-footer">
     <el-button size="small" @click="closeModelHandler">取 消</el-button>
-    <el-button size="small" type="primary" @click="submitHandler">确 定</el-button>
+    <el-button size="small" type="primary" @clic，，k="submitHandler">确 定</el-button>
   </span>
 </el-dialog>
     </div>
