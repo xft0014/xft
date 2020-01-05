@@ -19,6 +19,7 @@
         </template>
       </el-table-column>
     </el-table>
+    
     <!-- /表格结束 -->
     <!-- 分页开始 -->
     <!-- <el-pagination layout="prev, pager, next" :total="50"></el-pagination> -->
